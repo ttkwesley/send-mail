@@ -42,6 +42,7 @@ $mensagem->__set('para', $_POST['email']);
 $mensagem->__set('assunto', $_POST['assunto']);
 $mensagem->__set('mensagem', $_POST['mensagem']);
 
+//Retornar para a pagina index caso não tenha campos preenchidos
 if (!$mensagem->__mensagemValida()) {
     echo 'Mensagem não é valida';
     header('location: index.php?=AusenciaDeCampos');
